@@ -1,85 +1,60 @@
-// ******************************
-// Basic styling (ignore me!)
-// ******************************
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-  font-family:Arial,"Hiragino Kaku Gothic Pro W3",Meiryo,sans-serif;
-  background-color:#333;
+
+body {
+  font-family: Arial,"Hiragino Kaku Gothic Pro W3",Meiryo,sans-serif;
+  background-color: #333;
   color: #fff;
   text-align: center;
-  a,
-  a:visited{
-    color:#ccc;
-    text-decoration:none;
-  }
-  p{
-    margin:0;
-  }
 }
-// ******************************
-// End of Basic styling
-// ******************************
+body a,
+body a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+body p {
+  margin: 0;
+}
 
-// Flexbox wrapper
-.flexbox{
+.flexbox {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	height: 100vw;
-  
-  &:hover{
-    img {
-      opacity:0.28;
-    }
-  }
-
-  // Each flex item
-  .item{
-    position:relative;
-    width: 33.33%;  // 3 column
-    img{
-      width: 100%;
-      display: block;
-      transition:all .8s;
-    }
-    .title{
-      position:absolute;
-      top:48%;
-      left:0;
-      width:100%;
-      padding:0 3%;
-      font-size:30px;
-      text-shadow:0 0 8px rgba(0,0,0,0.42);
-    }
-    &:hover{
-      img{
-        opacity:1;
-      }
-    }
-  }
+  flex-wrap: wrap;
+  height: 100vw;
+}
+.flexbox:hover img {
+  opacity: 0.28;
+}
+.flexbox .item {
+  position: relative;
+  width: 33.33%;
+}
+.flexbox .item img {
+  width: 100%;
+  display: block;
+  transition: all .8s;
+}
+.flexbox .item:hover img {
+  opacity: 1;
 }
 
-// Mediaqueries
-@media ( max-width : 860px ){
-  // set to 2 column
-  .flexbox{
-    height:220vw;
-    .item{
-      width:50%;
-    }
+@media (max-width: 860px) {
+  .flexbox {
+    height: 220vw;
+  }
+  .flexbox .item {
+    width: 50%;
   }
 }
-@media ( max-width : 667px ){
-  // set to 1 column
-  .flexbox{
-    height:auto;
-    .item{
-      width:100%;
-    }
+@media (max-width: 667px) {
+  .flexbox {
+    height: auto;
+  }
+  .flexbox .item {
+    width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 # tiling
 任意の検索ワードに基づいた画像を縦横比を維持しつつ並べます
-http://shioharu.minibird.jp/tiling/index
+http://shioharu.minibird.jp/tiling/index.php
 
 ---
 
